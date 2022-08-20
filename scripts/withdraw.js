@@ -10,11 +10,11 @@ async function getBalance(provider, address) {
 
 async function main() {
   // Get the contract that has been deployed to Goerli.
-  const contractAddress="0xDBa03676a2fBb6711CB652beF5B7416A53c1421D";
+  const contractAddress="0xbb4b0befd11313e85c4fab67a08a34b3dc72758d";
   const contractABI = abi.abi;
 
   // Get the node connection and wallet connection.
-  const provider = new hre.ethers.providers.AlchemyProvider("goerli", process.env.GOERLI_API_KEY);
+  const provider = new hre.ethers.providers.AnkrProvider("goerli", process.env.GOERIL_API_KEY);
 
   // Ensure that signer is the SAME address as the original contract deployer,
   // or else this script will fail with an error.
